@@ -13,6 +13,7 @@ reader.question("What would you like to calculate?", function(input){
 	mathSymbol = tokens[0];
 	num1 = Number(tokens[1]);
 	num2 = Number(tokens[2]);
+	sqrt = Math.sqrt(tokens[1]);
 
 	console.log('mathSymbol', mathSymbol);
 	console.log('num1', num1);
@@ -29,6 +30,9 @@ reader.question("What would you like to calculate?", function(input){
 	}
 	if(mathSymbol === "/"){
 		console.log(num1 / num2);
+	}
+	if(mathSymbol === "sqrt"){
+		console.log(sqrt);
 	}
 	// This line closes the connection to the command line interface.
 	reader.close()
